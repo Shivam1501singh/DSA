@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 public class spiralmatrix {
     static void printspiralorder(int[][] matrix, int r, int c) {
@@ -9,28 +10,24 @@ public class spiralmatrix {
                 System.out.print(matrix[toprow][j] + " ");
                 total++;
             }
-
             toprow++;
             // rightcol->toprow to bottomrow
             for (int i = toprow; i <= bottomrow && total < r * c; i++) {
                 System.out.print(matrix[i][rightcol] + " ");
                 total++;
             }
-
             rightcol--;
             // bottomrow->rightcol to leftcol
             for (int j = rightcol; j >= leftcol && total < r * c; j--) {
                 System.out.print(matrix[bottomrow][j] + " ");
                 total++;
             }
-
             bottomrow--;
             // leftcol->bottomrow to toprow
             for (int i = bottomrow; i >= toprow && total < r * c; i--) {
                 System.out.print(matrix[i][leftcol] + " ");
                 total++;
             }
-
             leftcol++;
         }
     }
