@@ -1,0 +1,5 @@
+public class sorting6 {
+    public static void main(String[] args) {
+        
+    }
+}
