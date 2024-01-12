@@ -1,4 +1,5 @@
 public class sorting6 {
+    /*In this code the stability will be destroyed*/
     static int maxint(int []arr){
         int max=Integer.MIN_VALUE;
         for (int i=0;i<arr.length;i++){
