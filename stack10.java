@@ -2,7 +2,7 @@ import java.util.Stack;
 
 public class stack10 {
     public static void main(String[] args) {
-        String str="9-5+3*4/6";
+        String str="9-(5+3)*4/6";
         Stack<Integer>val= new Stack<>();
         Stack<Character>op=new Stack<>();
         for(int i=0;i<str.length();i++){
@@ -10,10 +10,21 @@ public class stack10 {
             int asci=(int)ch;
             if(asci>=48 && asci<=57){
                 val.push(asci-48);
-            } else if(op.size()==0) {
+            } else if(op.size()==0 || ch=='(' || op.peek()=='(') {
                 op.push(ch);
-            }
-            else{
+            } else if (ch==')') {
+                while(op.peek()!='('){
+                    int v2=val.pop();
+                    int v1=val.pop();
+                    if(op.peek()=='+')val.push(v1+v2);
+                    if(op.peek()=='-')val.push(v1-v2);
+                    if(op.peek()=='*')val.push(v1*v2);
+                    if(op.peek()=='/')val.push(v1/v2);
+                    op.pop();
+
+                }
+                op.pop();
+            } else{
                 if(ch=='+' || ch=='-'){
                     int v2=val.pop();
                     int v1=val.pop();
