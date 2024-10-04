@@ -12,6 +12,5 @@ public class recursion5 {
         int n=sc.nextInt();
         System.out.println(sumseries(n));
 
-
     }
 }

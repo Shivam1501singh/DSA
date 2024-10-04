@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class atothepowerb {
-    public static void main(String[] args) {
+    public static void main(String[] shivam) {
         Scanner sc=new Scanner(System.in);
         System.out.println("enter the value of a:-");
         int a =sc.nextInt();

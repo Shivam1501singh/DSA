@@ -7,7 +7,7 @@ public class pattern3 {
         int r=sc.nextInt();
         for(int i=0;i<=r;i++){
             for(int j=0;j<=i;j++){
-                System.out.print("*");
+                System.out.print("1");
             }
             System.out.println(" ");
         }
