@@ -1,6 +1,7 @@
-public class sorting9 {
-    // radix sort
+public class sorting10 {
+    // bucket sort
+    
     public static void main(String[] args) {
-        
+
     }
 }
